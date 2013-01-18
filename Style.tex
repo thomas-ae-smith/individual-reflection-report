@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=35mm, right=24mm, top=24mm, bottom=24mm]{geometry}
+\usepackage{parskip} % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=parskip
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0.4cm}
+
+
+% Clickable references, glossary, footnotes etc.
+\usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref}
+
+% Bibliography
+\usepackage[authoryear,sort&compress]{natbib}
+\bibliographystyle{apalike}
+% \renewcommand{\bibsection} % Make bibtex not print a heading for the references and appendix.
+
+% Pictures
+\usepackage{graphicx}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{subcaption}
+
+% Blue Colored URLs
+\usepackage[usenames]{color}
+\definecolor{urlcolor}{rgb}{0,0.08,0.45}
+
+% Fancy titles
+\usepackage{bold-extra}
+\usepackage[sc,bf,compact,small]{titlesec}
+
+% Allow block comments within \begin{comment} ... \end{comment}
+\usepackage{comment}
+
+% Nicer looking table rules.
+\usepackage{booktabs}
+
+% Do not allow floats to float into following sections.
+\usepackage[section]{placeins}
+
+% More math fonts (used for mathbb)
+\usepackage{amsfonts}
+
+% Allow fractions which look like: a/b
+\usepackage{nicefrac}
+
+% Allow line-breaking in table cells
+\usepackage{pbox}
+
+% Better appendix environment
+\usepackage[toc,page,title,titletoc,header]{appendix}
+
+\usepackage{amsmath}
+\usepackage{tabularx}

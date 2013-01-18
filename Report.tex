@@ -1,0 +1,233 @@
+%% Include all the formatting etc.
+\include{Style}
+\usepackage{endnotes}
+\renewcommand\notesname{Links}
+\usepackage{enumitem}
+\setlist[description]{style=nextline}
+\setlist{noitemsep}
+\usepackage{graphicx}
+
+
+%% Document
+\begin{document}
+
+%% Title
+\vspace*{0.5cm}
+\begin{center}
+	\textbf{\large{School of Electronics and Computer Science}}\\
+	\large{ELEC6050: MEng Group Design Project}\\[0.9cm]
+
+	\hrule
+
+	Individual Reflection and Evaluation \\
+	\normalsize{17th January 2013}
+	\vspace{0.5cm}
+\end{center}
+
+\begin{center}
+	\begin{tabularx}{0.78\textwidth}{X l l}
+		Project Title: & \multicolumn{2}{p{7.7cm}}{\textbf{Interactivity and Granular Targeting in Live Media: an Empirical Study}} \\[0.7ex]
+		Author: & Thomas Smith & \texttt{taes1g09@soton.ac.uk} \\[0.7ex]
+		Team Number: & \multicolumn{2}{l}{3} \\[0.7ex]
+		Supervisors: & Dr Les Carr & \texttt{lac@soton.ac.uk} \\
+					 & Dr David Tarrant & \texttt{dt2@soton.ac.uk} \\[0.7ex]
+		2nd Examiner: & Dr Mike Wald & \texttt{mw@soton.ac.uk} \\[0.5cm]
+	\end{tabularx}
+
+\end{center}
+
+% How did the group form?
+%	* Worked together before
+% How well did it function?
+% What role(s) did you and the other group members play?
+%	* Leader - Pete
+% Were there any gaps, or problems determining roles?
+\section*{Group Formation and Operation}
+
+The group had worked together before on a number of other university projects (COMP2012 Software Engineering Group Project, COMP3001 Scripting languages) and so had some prior awareness of our respective strengths and weaknesses.
+This previous experience allowed us to function well as a team, as we had already reached the fourth or `performing' stage of Tuckman's group development model\endnote{\url{http://en.wikipedia.org/wiki/Tuckman's_stages_of_group_development}}. Based our previously successful approaches, we decided to hold regular meetings and working sessions - we collated our timetables and worked out the following schedule:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c}
+ 					& Group discussion 		& Lab time for \\
+Progress Meeting 	& and development time 	& collaborative development\\
+\hline
+2pm-4pm Tuesdays 	& 10am-1pm Wednesdays 	& 11am-3pm Fridays\\
+\end{tabular}
+\end{table}
+% 14:00–16:00 on Tuesday—a photograph of which is included in Appendix C—and were occasionally attended by supervisors and Inqb8r. 10:00–13:00 on Wednesdays was reserved for group meeting or development time, and 11:00–15:00 on Friday
+Clients and supervisors were regularly invited to our progress meetings in order to keep them briefed, and development time was not restricted to the sessions shown above - rather, these were for specific collaborative work to keep team members updated on progress.
+
+As it had worked well for us previously, we decided to designate one person as a leader to control the meetings, and another to take minutes. We adapted an agile development strategy, with each week's tasks and targets discussed, assigned and agreed upon in the weekly meeting according to loose team roles. We initially decided to categorise roles into client-side and server-side responsibilities, as this had worked well in our Scripting project, however there was a greater variety of individual tasks to be completed on this project (such as survey design and Wowza configuration), so we ended up with a more varied selection of roles, as discussed in the next section.
+
+\hfill \begin{tabular}{l l}
+	Group grade: & $\nicefrac{9}{10}$ \\
+\end{tabular}
+
+% What were your group’s strengths and weaknesses?
+% How did you allocate responsibilities to different members of the group?
+% Did you all contribute equally, or did some people do more work than others?
+\section*{Work Breakdown}
+
+One of the group's strengths lay in our ability to each focus on separate areas of the project, leading to concerted development effort in what would become our specialist areas. We deliberately split the work allocation in a way that ensured overlap between each member's responsibilities, so that there was no part of the system that only one person knew all about. We also encouraged pair programming, with the same intention to reduce the concentration of essential knowledge, and mitigate the problems caused by any particular team member being out of action / uncontactable for whatever reason. However, the varied nature of the tasks we ultimately attempted (managing a Wowza server, building a trained recommender system, interfacing with the Facebook and MovieDB APIs, creating a RESTful interface, Javascript data visualisation) means that our approach would only have been able to reduce, not eliminate the negative effects of a team member being unable to work for a while, as we were each forced to become experts in our own areas.
+
+
+Project responsibilities were allocated largely based on individual previous experience in relevant areas. We attempted to ensure an even split of development work between client- and server-side, as with previous projects that the group has worked on, and also tried to allocate appropriate amounts of non-development project work to complement individual strengths.
+
+
+\begin{description}
+\item[Peter West:] \hfill
+	\begin{description}
+		\item{Previous Experience:} Team leader in previous projects that the group has undertaken. Web development internship \& employment with University research teams\endnote{\url{http://www.enakting.org}}. Freelance web development - strong web experience.
+		\item{Project Role:} Team Leader - Main liaison between group and client/supervisors. Chair at group meetings, with power to make final decisions.
+		\item{Development Role:} Client-server interface, user-facing aspects of the system (GUI). Wowza stream reception and display.
+	\end{description}
+
+\item[Dexter Lowe:] \hfill
+	\begin{description}
+		\item{Previous Experience:} Enterprise Java work\endnote{\url{http://www.triplesoft.co.uk}}, 3YP (distributed system in Java), strong Java experience. Windows server management experience.
+		\item{Project Role:} Architecture oversight. Knowledge of system structure and subsystem interaction via internal APIs.
+		\item{Development Role:} Wowza server management - stream capture, processing and broadcast. Close liaison with Pete Wood, client representative with Wowza expertise. Survey assistance - ethical approval submissions.
+	\end{description}
+
+\item[Jim Skinner:] \hfill
+	\begin{description}
+		\item{Previous Experience:} Internship work with University research teams\endnotemark[2]. Strong academic interest in AI and recommender systems.
+		\item{Project Role:} Testing oversight. Knowledge of subsystem testing strategies, regression testing particularly on recommender system.
+		\item{Development Role:} Advert and programmer recommender system - recommender development and training, API implementation.
+	\end{description}
+\newpage
+\item[Thomas Smith:] \hfill
+	\begin{description}
+		\item{Previous Experience:} Web development internships with University research teams\endnotemark[2]$^{,}$\endnote{\url{http://www.orchid.ac.uk}} - experience running studies during internship work and 3YP.
+		\item{Project Role:} Documentation oversight. Minutes meetings and ensures that implementation decisions are recorded. Proofreading and quality assurance for handin documentation.
+		\item{Development Role:} Advertiser interface - visualisation of data. Survey design and execution, results analysis.
+	\end{description}
+
+\item[Adam Thomas:] \hfill
+	\begin{description}
+		\item{Previous Experience:} Web development employment, project manager\endnote{\url{http://www.buckleconsulting.com}}. Javascript, server management and code review experience.
+		\item{Project Role:} Specification oversight. Ensures that development of features matches client brief. Consideration of scope and time constraints.
+		\item{Development Role:} Client-server interface, server development and user-facing aspects of the system (GUI). Facebook integration and API development.
+	\end{description}
+
+\end{description}
+
+Certain tasks - such as interactive advert development - were undertaken by all members of the team, to ensure a varied output. Others were performed by one or two members individually, and then presented to the rest of the group for verification and sanity-checking. Overall, the work breakdown was effective as it allowed each member to build up considerable expertise and make efficient progress in in their own respective domains, without overly concentrating essential knowledge.
+
+\hfill \begin{tabular}{l l}
+	Work breakdown grade: & $\nicefrac{8}{10}$ \\
+\end{tabular}
+
+% How did the group plan the project?
+% Which suggestions were yours?
+% To what extent did you manage to follow the plan?
+% What adjustments did you have to make? 
+\section*{Planning and Progress}
+
+A strong point of the group's performance was our continual close contact with the client, as they were able to provide valuable relevant expertise - particularly in dealing with the Wowza server, and the kinds of information that advertisers would find useful. This close contact arose out of an initial weakness of the project, which was the open nature of the original brief. It took a few weeks of discussion with the client at the start of the project to narrow an originally fairly ambitious scope into something that was achievable in the short timeframes available.
+
+Even before the brief was fully finalised, we had begun to specify what sort of systems and subsystems the project was likely to require, and look at who would be best suited for each role. Most of the decisions were collaborative, but we split into smaller teams for some specific systems - Jim and I discussed alternative approaches for the initial design of the recommender system, as we both had taken relevant modules on Machine Learning.
+
+The Agile development methodology we used allowed us to evaluate our progress weekly and adjust our plans accordingly. For reference, we made a Gantt chart of our initial schedule at the beginning of the project, and broadly followed it throughout the systems development. Doing so forced us to reduce the scope of several of the features we had initially planned, but our constant awareness of the time limitations remaining ensured that we were able to produce a complete - albeit reduced - system by the end of the development period.
+
+This approach was particularly helpful during the preparation for the full User Study, as the study covered only the users' responses to advertisements, and so a custom version of the system was necessary that exposed only the functionality needed for the study. This was an initially unplanned-for development task, however our approach allowed us to dynamically reallocate team members to cover both this and fuller design of the survey, resulting ultimately in a successful study despite infrastructure outages.
+
+\hfill \begin{tabular}{l l}
+	Planning and progress grade: & $\nicefrac{7}{10}$ \\
+\end{tabular}
+
+% Considering the aspects of the project for which you had responsibility, justify the decisions you made, and assess how effective your contributions were
+\section*{My Own Contribution}
+
+Initially, the main focus of my role was to develop the systems that would collect and collate data about how programmes and adverts were viewed and responded to. To inform early decisions about how this would work, we decided that a survey of existing user opinions would provide useful data, and as it was most relevant to my areas and I had previous experience running user surveys, I was put in charge of developing and executing the survey, and then analysing the results to be presented at our first Progress Seminar. We received far more participants in this initial survey than we had hoped for, and were able to extract some useful data from the responses, mostly relating to users' issues with existing adverts.
+
+Work on the advertisers' interface involved defining the types of data we would collect about advert impressions, and deciding how best to present this data in aggregate - this required research into current industry standards, and discussion with the client about typical advertiser demands. Based on this feedback from the client, we decided to focus data-collection on adverts only, and ignore data about programme impressions beyond that necessary for the recommender to function.
+
+Though it was still deemed important as part of the finished system, the advertisers' interface had no bearing on the research aspects of the project, and so a few weeks later it was set aside again in favour of preparing for the full User Study. I was heavily involved in the survey design, led recruiting participants and finalising the questions we would cover, and was due to take the first day of interviews. When our computing facilities were unavailable on the day the study was due to start, Peter and I worked to relocate our hosting and make the system ready for rescheduled interviews the following day, which I ran.
+
+Throughout the project I was responsible for taking minutes of meetings and recording important decisions, in preparation for the progress seminars, presentation and final report. I was also responsible for checking grammar, spelling and presentation of these deliverables - this became particularly challenging in the run-up to the final handin, as our report spanned over 70 pages of text, and sections were being modified and updated at a prodigious rate, but I believe that the final handin quality was generally appropriate.
+
+
+
+
+% Relevant experience based on what I actually ended up doing I guess would have to be summer internships (web development work for the uni, including maps and other visualisations) and running studies, including for my third year project. Plus the scripting project \& SEG projects we all did, I guess. Project areas those (visualisations, study etc.) plus documentation - taking minutes, general scribing, proof reading etc. 
+\hfill \begin{tabular}{l l}
+	Personal contribution grade: & $\nicefrac{7}{10}$ \\
+\end{tabular}
+
+% What lessons did you learn?
+% With hindsight, would you do anything differently?
+\newpage
+\section*{Reflective Evaluation}
+
+Overall, I believe the project was highly successful in multiple areas. We developed a working proof-of-concept system that fits the clients' desires, ran two successful studies that provided data relevant to our purposes, made a serendipitous discovery that potentially warrants further study, and learned a lot as a group about planning, project lifecycles, system development and effective presentation. The response to the final presentation has been highly positive, resulting in multiple PhD and job offers - and one member of the team is already employed by VisualDNA.
+
+Personally, I learned a lot about the importance of remaining fluid in our approach. Certain unexpected aspects of the project could have seriously impacted the development of the system. However, by continually reassessing time remaining against the intended scope of features not yet implemented, we were able to judiciously limit our feature selection. Even so, by restricting ourselves to fewer features initially, we would have saved even the small amounts of initial development work we spent on features that were ultimately cut. As a group, I believe that we learned a lot about how to effectively present our progress. We received multiple comments on the quality of our final presentation, and the improvements it showed over our initial ones. I believe this is largely due to the feedback and advice that we received from Dave Tarrant, resulting in severe changes to our presentation strategy.
+
+In hindsight, I would attempt to more clearly plan ahead precise dates for both studies. This would have allowed us to get ethical approval completed earlier, and would potentially have allowed both studies to run longer in parallel with continued development - rather than interrupting development as actually occurred. It would also have resulted in greater clarity about the timescale available for the advertisers' interface development. One of the features the clients mentioned as desirable for advertisers was an implementation of the VAST interface, however as this had no bearing on the research aspects of the system it was not a feature we chose to develop.
+
+In conclusion, I believe that the fact we had previously worked together allowed us to bypass the usual difficulties of forming a group, and quickly begin working effectively on the project. We made sensible role allocations for division of labour, which helped when a team member was impaired by tendinitis. Though our initial plan was ambitious, our development style allowed us to evaluate what was still possible and progress appropriately. My own contributions were strongest in the surveys we performed and the documentation we produced, and between these efforts I developed an interface that has satisfied the clients requirements. Overall, the project was highly successful.
+
+\hfill \begin{tabular}{l l}
+	Overall project grade: & $\nicefrac{9}{10}$ \\
+\end{tabular}
+
+% You should include in the appendix photocopies or extracts from your log-book and email logs in support of your statements. In case of serious discrepancies between different accounts, the examiners may request complete log-books and email logs.
+
+\begingroup
+\parindent 0pt
+\parskip 2pt
+\def\enotesize{\small}
+\theendnotes
+\endgroup
+
+% \newpage
+% \input{Appendices}
+
+\end{document}
+
+Peter Team leader/client-server interface/gui?
+
+Adam Thomas Buckle Consulting - senior developer & project manager. Managing small teams/reviewing code and of course coding myself. Act as a sort of barrier between junior developers and the client - whom I liased with. client-server interface/gui?
+
+Jim Skinna In my report, I went with "Strong academic interest in AI and recommender systems" Jim Skinna I'd say I was assigned to do the programme recommender & advert retriever. Lead tester
+
+Dexter Lowe for me, strong knowledge of java, 3yp in Java, enterprise java usage at Triple software ltd, windows server experience as sysadmin for triplesoft. message passing based distributed systems in java (3yp & triplesoft) Dexter Lowe I was probably, provision of streaming video and video recording
+
+
+
+Justified evaluation of the strengths and weaknesses of the team, process, design, and results
+
+
+
+ 
+ 
+This report should be at most 2,000 words, around 5 pages.  You are advised to include the following sections, or similar.   You are asked to write honestly about how the project went, and to grade various aspects on a scale of 0 (hopeless) to 10 (perfect).  Your comments will be kept confidential from other members of the group.
+Group Formation and Operation
+How did the group form?  How well did it function?  What role(s) did you and the other group members play?  Were there any gaps, or problems determining roles?
+ 
+​Grade your group ​/10
+Work Breakdown
+What were your group’s strengths and weaknesses?  How did you allocate responsibilities to different members of the group?  Did you all contribute equally, or did some people do more work than others?
+ 
+​Grade your group’s work breakdown​/10
+ 
+Planning and Progress
+How did the group plan the project?  Which suggestions were yours?  To what extent did you manage to follow the plan?  What adjustments did you have to make?
+ 
+​Grade your group’s planning & progress​/10
+ 
+Your Own Contribution
+Considering the aspects of the project for which you had responsibility, justify the decisions you made, and assess how effective your contributions were.  
+ 
+​Grade your own contribution​/10
+Reflective Evaluation
+What lessons did you learn?  With hindsight, would you do anything differently?
+ 
+ 
+ 
+Appendix
+You should include in the appendix photocopies or extracts from your log-book and email logs in support of your statements.  In case of serious discrepancies between different accounts, the examiners may request complete log-books and email logs.
+ 
